@@ -11,6 +11,7 @@ const authorize = require("./middlewares/roleMiddleware");
 
 const userRoutes = require("./routes/userRoutes");
 const fitnessRoutes = require("./routes/fitnessRoutes");
+const aiRoutes = require("./routes/aiRoutes");
 
 // Load Environment Variables
 dotenv.config();
@@ -25,7 +26,8 @@ app.use(express.json());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
-app.use("/api/users", fitnessRoutes);
+app.use("/api/fitness", fitnessRoutes);
+app.use("/api/ai", aiRoutes);
 
 
 // =======================
